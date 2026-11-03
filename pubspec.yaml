@@ -1,0 +1,35 @@
+name: aircall
+description: AirCall - offline voice calling over your local Wi-Fi network.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1          # state management
+  flutter_webrtc: '>=0.12.0 <2.0.0' # real-time audio (WebRTC)
+  permission_handler: '>=11.3.1 <13.0.0' # microphone permission
+  shared_preferences: ^2.2.3        # settings + call history (local only)
+  connectivity_plus: '>=6.0.0 <8.0.0' # Wi-Fi / network type detection
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: '>=4.0.0 <7.0.0'
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/app_icon.png
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#101828"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  min_sdk_android: 23
